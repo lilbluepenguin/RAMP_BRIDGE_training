@@ -100,8 +100,10 @@ srun --partition=[partition] --qos=[qos] --mem=2G --pty bash
 - check on your running jobs with `squeue` (your job will likely finish before you even get a chance to check, so it might be empty)
 - check on the recently completed job using `sacct`
 - check your error and output files
-- submit the example script `example.sh` using `sbatch  `
+- submit the example script `example.sh` using `sbatch`
 - cancel the job submitted with the example script using `scancel [jobid]`
+- check on your jobs again using `sacct`
+- 
 
 
 ### Additional Information
