@@ -103,7 +103,7 @@ srun --partition=[partition] --qos=[qos] --mem=2G --pty bash
 - submit the example script `example.sh` using `sbatch`
 - cancel the job submitted with the example script using `scancel [jobid]`
 - check on your jobs again using `sacct`
-- 
+- check on the resources used by the job using `sinfo`
 
 
 ### Additional Information
