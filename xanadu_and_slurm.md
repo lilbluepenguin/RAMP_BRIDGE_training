@@ -89,11 +89,17 @@ srun --partition=[partition] --qos=[qos] --mem=2G --pty bash
 - edit the header to reflect 1 cpu and 1 GB of memory
 - set the error file name to test_error.err 
 - set the out file name to test_output.out
-- in your script, after the last line of the header, type ` echo "Hello World my name is ___. This is a SLURM script`
+- in your script, after the last line of the header, type
+    ```
+    echo "hostname: `hostname`"
+    echo "date: `date`"
+    touch newfile.txt
+    
+    ```
 - submit your script using `sbatch` 
 - check on your running jobs with `squeue` (your job will likely finish before you even get a chance to check, so it might be empty)
 - check on the recently completed job using `sacct`
-- check your error and output files, your out file should say "Hello World my name is ___. This is a SLRUM script"
+- check your error and output files
 - submit the example script `example.sh` using `sbatch  `
 - cancel the job submitted with the example script using `scancel [jobid]`
 
