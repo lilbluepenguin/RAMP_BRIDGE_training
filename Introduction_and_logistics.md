@@ -1,8 +1,10 @@
 # Introduction 
 
 ### Open up the terminal on your computer
-- for mac: Press Command+Space to open Spotlight Search. Type "Terminal" and press Enter: This will launch the Terminal application.
-- for windows: Press the Windows key on your keyboard to open the Start menu. Type "Windows Terminal" in the search bar and click on it: This will launch the Windows Terminal application.
+- for mac:
+  - Press Command+Space to open Spotlight Search. Type "Terminal" and press Enter: This will launch the Terminal application.
+- for windows:
+  - Press the Windows key on your keyboard to open the Start menu. Type "Windows Terminal" in the search bar and click on it: This will launch the Windows Terminal application.
 
 Once you have opened your terminal, you should see something like the following: 
 
