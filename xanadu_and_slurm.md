@@ -76,6 +76,7 @@ sinfo
 ```
 
 ## command to start an interactive session:
+You can adjust the memory you want to allocate to this interactive session with the `--mem=` flag
 ```
 srun --partition=[partition] --qos=[qos] --mem=2G --pty bash
 ```
