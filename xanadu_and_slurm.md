@@ -7,8 +7,6 @@ We will be using the command line text editor nano
 ```
 nano test_script.sh
 ```
-This is what it should look like when you create a new file with nano:
-
 
 To close out of a file, use `control + x`
 
