@@ -1,13 +1,20 @@
-# Working with the Xanadu Cluster: Writing script
+# Working with the Xanadu Cluster: Writing scripts
 
-## My preferred way to start a script:
+## Starting a script
+
+We will be using the command line text editor nano
 
 ```
-nano test_script.sh 
+nano test_script.sh
 ```
---vim is my nemesis and i don't know how to use it 
+This is what it should look like when you create a new file with nano:
 
-> insert image of nano screen 
+
+To close out of a file, use `control + x`
+
+It will prompt you if you want to save the edits and also what name you want to save the file under. The current file name should already be populated, but you could choose to edit a file with nano and instead of saving the edits to the original, save it under a different name and it will not overwrite the original file.
+
+
 
 
 ## This is what the SLRUM header looks like:
@@ -60,7 +67,7 @@ squeue
 sacct
 ```
 
-## command to check on resources a job used
+## command to check on resources a job used - this will only be accurate after the job finishes running
 ```
 seff [jobid] 
 ```
@@ -84,9 +91,9 @@ srun --partition=[partition] --qos=[qos] --mem=2G --pty bash
 
 ## Practice
 - create a file named test_script.sh
-- open test_script.sh 
+- open test_script.sh using `nano`
 - paste in the SLURM header 
-- set partition and qos to ?mcbstudent? ?general?
+- set partition and qos to ``
 - edit the header to reflect 1 cpu and 1 GB of memory
 - set the error file name to test_error.err 
 - set the out file name to test_output.out
@@ -95,13 +102,13 @@ srun --partition=[partition] --qos=[qos] --mem=2G --pty bash
     echo "hostname: `hostname`"
     echo "date: `date`"
     touch newfile.txt
-    
     ```
 - submit your script using `sbatch` 
 - check on your running jobs with `squeue` (your job will likely finish before you even get a chance to check, so it might be empty)
 - check on the recently completed job using `sacct`
 - check your error and output files
 - submit the example script `example.sh` using `sbatch`
+- check on the running job using `squeue`
 - cancel the job submitted with the example script using `scancel [jobid]`
 - check on your jobs again using `sacct`
 - check on the resources used by the job using `sinfo`
