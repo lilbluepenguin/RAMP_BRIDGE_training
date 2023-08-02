@@ -13,14 +13,50 @@ To close out of a file, use `control + x`
 It will prompt you if you want to save the edits and also what name you want to save the file under. The current file name should already be populated, but you could choose to edit a file with nano and instead of saving the edits to the original, save it under a different name and it will not overwrite the original file.
 
 
+## Loading software on Xanadu
+Software is globally installed as **Modules**
 
+To see what software is currently installed, use `module avail` 
 
-## This is what the SLRUM header looks like:
-The header is what tells the job manager on Xanadu (SLRUM) important information information in order to schedule your job.
+You should see something like the following, just much longer:
+```
+---------------------------------------- /isg/shared/modulefiles -----------------------------------------
+2.1.1                              gmap/2020-12-17                    perl/5.32.1
+4Cin/1.0                           gmap/2021-05-27                    perl/5.36.0
+abyss/1.9.0                        gmap/2023-02-17                    PfamScan/1.6
+abyss/2.0.2                        GMcloser/1.6.2                     pfamtools/2017-02-23
+abyss/2.1.2                        gmp/6.2.1                          phobius/1.01
+abyss/2.1.4                        gnu-parallel/20160622              phrap/1.090518
+abyss/2.3.5                        gnuplot/5.2.2                      phred/0.071220.c
+add_scores/v1                      gos/0.1.1                          phylip/3.697
+...
+```
+
+You can see above that there are different versions for most software, so make sure to specify which version you want to use when you load the module. You can activate modules using the command `module load <module name>`
+
+Here I want to see all the versions of R installed on the cluster so I use `module avail R/` and here is the output:
+```
+---------------------------------------- /isg/shared/modulefiles -----------------------------------------
+R/2.14.2   R/3.2.1    R/3.3.2    R/3.4.3    R/3.5.2    R/3.6.3    R/4.2.0
+R/3.1.0    R/3.2.3    R/3.3.3    R/3.5.1    R/3.6.0    R/4.0.3    R/4.2.2
+R/3.1.2    R/3.3.1    R/3.4.1    R/3.5.1-MS R/3.6.1    R/4.1.2
+```
+I want to load the most recent installation, which I now know is version 4.2.2, using the command `module load R/4.2.2`
+
+You can check what modules are currently loaded using `module list`
+```
+Currently Loaded Modulefiles:
+  1) R/4.2.2
+```
+You can unload modules using the `module unload <module name>`
+
+## Setting up your scripts to run on Xanadu - SLURM scheduler 
+This is what the SLRUM header looks like. The header is what tells the job manager on Xanadu (SLRUM) important information information in order to schedule your job.
+
 This includes 
 - job name (something descriptive)
 - number of cpus
-- amount of memory 
+- amount of memory (RAM)
 - partition
 - qos 
 - email notifications
@@ -40,15 +76,15 @@ This includes
 #SBATCH -o %x_%j.out
 #SBATCH -e %x_%j.err
 ```
-
+In the last two lines of the header:
 - the %x stands for the slurm job name 
 - the %j stands for the slurm jobid that is assigned upon submission
-- you can also choose to write specific names for the error and out files like so:
-
+- therefore `%x_%j` prints to the prefix `jobname_jobID`
+- you can also choose to write specific names for the error and out files rather than using the job name. I would always include the `%j` so that each time you run your job you don't overwrite your err and out files
 
 ```
-#SBATCH -o test_job.out
-#SBATCH -e test_job.err
+#SBATCH -o newjob_%j_.out
+#SBATCH -e newjob_%j.err
 ```
 
 ## command to submit a script:
@@ -151,15 +187,24 @@ crbm          up   infinite      1   idle xanadu-55
 </p>
 
 ## command to start an interactive session:
-You can adjust the memory you want to allocate to this interactive session with the `--mem=` flag
+When you first log into Xanadu, you are on the head node or login node. YOU **DO NOT** WANT TO DO ANY WORK HERE. This will slow down the node for **EVERYONE** which we do not want. Instead, you want to start an interactive session using the command `srun` as shown below. You can adjust the memory you want to allocate to this interactive session with the `--mem=` flag. 
 ```
 srun --partition=[partition] --qos=[qos] --mem=2G --pty bash
 ```
 
 
 ## Practice
+**part 1: using modules**
+- start an interactive session using `srun`, make sure to check that you are in fact in an interactive session and not on one of the head nodes using the command `hostname`. You should see something like `xanadu-##` 
+- use the command `module avail` to see all of the modules available 
+- load the module `seqkit/2.2.0` using `module load`
+- use `module list` to check that the module is loaded
+ *(optional: type `seqkit` and see what information it prints out about the software)*
+- use `module unload` to unload the module
+
+**part 2: writing scripts**
 - create a file named `test_script.sh`
-- open test_script.sh using `nano`
+- open `test_script.sh` using `nano`
 - paste in the default SLURM header 
 - set partition and qos to `mcbstudent`
 - edit the header to reflect 1 cpu and 1 GB of memory
@@ -169,6 +214,7 @@ srun --partition=[partition] --qos=[qos] --mem=2G --pty bash
     ```
     echo "hostname: `hostname`"
     echo "date: `date`"
+
     touch newfile.txt
     ```
 - submit your script using `sbatch` 
