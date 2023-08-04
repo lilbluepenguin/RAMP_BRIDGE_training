@@ -73,11 +73,11 @@ This includes
 #SBATCH --job-name=test_job
 #SBATCH -N 1
 #SBATCH -n 1
-#SBATCH -c 4
+#SBATCH -c 1
 #SBATCH --partition=general
 #SBATCH --qos=general
 #SBATCH --mail-type=END
-#SBATCH --mem=10G
+#SBATCH --mem=1G
 #SBATCH --mail-user=
 #SBATCH -o %x_%j.out
 #SBATCH -e %x_%j.err
@@ -212,13 +212,13 @@ crbm          up   infinite      1   idle xanadu-55
   
 - paste in the default SLURM header
   
-- set partition and qos to `general`
+- set partition to `general` and qos to `general`
   
 - edit the header to reflect 1 cpu and 1 GB of memory
   
-- set the error file name to test_error.err
+- set the err file name to test_error_%j.err
   
-- set the out file name to test_output.out
+- set the out file name to test_error_%j.out
   
 - in your script, after the last line of the header, type
     ```
@@ -233,11 +233,19 @@ crbm          up   infinite      1   idle xanadu-55
 - check on your running jobs with `squeue`
   
 - Your job might finish before you even get a chance to check, so check on the recently completed job using `sacct`
-- check on the resources used using `seff` 
+  
+- check on the resources used using `seff`
+  
 - copy the file `/core/labs/Wegrzyn/ConGenExample/fastqc.sh`
+  
 - edit the script to have your email in place of `first.last@uconn.edu` in the SLURM header
+  
 - submit the example script `fastqc.sh` using `sbatch`
+  
 - check on the running job using `squeue`, if it is still in the queue (says PD for job status) wait a minute and type `squeue` again to see if it has started running
+  
 - cancel the job submitted with the example script using `scancel [jobid]`
+  
 - check on your jobs again using `sacct`
+
 - check on the resources used by the job using `seff`
