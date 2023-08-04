@@ -22,7 +22,7 @@ Thursday August 3rd
 Friday August 4th
 - [Introduction to shell scripting](https://swcarpentry.github.io/shell-novice/01-intro.html)
 - [Introduction to UConn Xanadu](xanadu_and_slurm.md)
-- [file manipulation fun](fun_with_files.md)
+- [file manipulation fun](fun_with_files.md)  (dont click on this yet, this will be moved)
 
 Monday August 7th
 - [challenge exercise 1](challenge_monday_aug_7.md)
