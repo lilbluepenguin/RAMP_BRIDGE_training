@@ -1,17 +1,11 @@
 # Working with the Xanadu Cluster: Writing scripts
 
-## Starting a script
 
-We will be using the command line text editor nano
-
+## command to start an interactive session:
+When you first log into Xanadu, you are on the head node or login node. YOU **DO NOT** WANT TO DO ANY WORK HERE. This will slow down the node for **EVERYONE** which we do not want. Instead, you want to start an interactive session using the command `srun` as shown below. You can adjust the memory you want to allocate to this interactive session with the `--mem=` flag. For partition, you will usually use `general`
 ```
-nano test_script.sh
+srun --partition=[partition] --qos=[qos] --mem=2G --pty bash
 ```
-
-To close out of a file, use `control + x`
-
-It will prompt you if you want to save the edits and also what name you want to save the file under. The current file name should already be populated, but you could choose to edit a file with nano and instead of saving the edits to the original, save it under a different name and it will not overwrite the original file.
-
 
 ## Loading software on Xanadu
 Software is globally installed as **Modules**
@@ -49,6 +43,18 @@ Currently Loaded Modulefiles:
   1) R/4.2.2
 ```
 You can unload modules using the `module unload <module name>`
+
+## Starting a script
+
+We will be using the command line text editor nano
+
+```
+nano test_script.sh
+```
+
+To close out of a file, use `control + x`
+
+It will prompt you if you want to save the edits and also what name you want to save the file under. The current file name should already be populated, but you could choose to edit a file with nano and instead of saving the edits to the original, save it under a different name and it will not overwrite the original file.
 
 ## Setting up your scripts to run on Xanadu - SLURM scheduler 
 This is what the SLRUM header looks like. The header is what tells the job manager on Xanadu (SLRUM) important information information in order to schedule your job.
@@ -186,39 +192,52 @@ crbm          up   infinite      1   idle xanadu-55
 </details>
 </p>
 
-## command to start an interactive session:
-When you first log into Xanadu, you are on the head node or login node. YOU **DO NOT** WANT TO DO ANY WORK HERE. This will slow down the node for **EVERYONE** which we do not want. Instead, you want to start an interactive session using the command `srun` as shown below. You can adjust the memory you want to allocate to this interactive session with the `--mem=` flag. 
-```
-srun --partition=[partition] --qos=[qos] --mem=2G --pty bash
-```
-
 
 ## Practice
 **part 1: using modules**
-- start an interactive session using `srun`, make sure to check that you are in fact in an interactive session and not on one of the head nodes using the command `hostname`. You should see something like `xanadu-##` 
-- use the command `module avail` to see all of the modules available 
+- start an interactive session using `srun`, make sure to check that you are in fact in an interactive session and not on one of the head nodes using the command `hostname`. You should see something like `xanadu-##`
+
+- use the command `module avail` to see all of the modules available
+
 - load the module `seqkit/2.2.0` using `module load`
-- use `module list` to check that the module is loaded
- *(optional: type `seqkit` and see what information it prints out about the software)*
+
+- use `module list` to check that the module is loaded *(optional: type `seqkit` and see what information it prints out about the software)*
+  
 - use `module unload` to unload the module
 
 **part 2: writing scripts**
 - create a file named `test_script.sh`
+  
 - open `test_script.sh` using `nano`
-- paste in the default SLURM header 
-- set partition and qos to `mcbstudent`
+  
+- paste in the default SLURM header
+  
+- set partition and qos to `general`
+  
 - edit the header to reflect 1 cpu and 1 GB of memory
-- set the error file name to test_error.err 
+  
+- set the error file name to test_error.err
+  
 - set the out file name to test_output.out
+  
 - in your script, after the last line of the header, type
     ```
     echo "hostname: `hostname`"
     echo "date: `date`"
 
     touch newfile.txt
+    echo "this is a new file" >> newfile.txt
     ```
-- submit your script using `sbatch` 
-- check on your running jobs with `squeue` 
+- submit your script using `sbatch`
+  
+- check on your running jobs with `squeue`
+  
 - Your job might finish before you even get a chance to check, so check on the recently completed job using `sacct`
 - check on the resources used using `seff` 
-
+- copy the file `/core/labs/Wegrzyn/ConGenExample/fastqc.sh`
+- edit the script to have your email in place of `first.last@uconn.edu` in the SLURM header
+- submit the example script `fastqc.sh` using `sbatch`
+- check on the running job using `squeue`, if it is still in the queue (says PD for job status) wait a minute and type `squeue` again to see if it has started running
+- cancel the job submitted with the example script using `scancel [jobid]`
+- check on your jobs again using `sacct`
+- check on the resources used by the job using `seff`
