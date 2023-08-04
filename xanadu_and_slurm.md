@@ -212,7 +212,7 @@ crbm          up   infinite      1   idle xanadu-55
   
 - paste in the default SLURM header
   
-- set partition to `general` and qos to `general`
+- set partition to `mcbstudent` and qos to `mcbstudent`
   
 - edit the header to reflect 1 cpu and 1 GB of memory
   
