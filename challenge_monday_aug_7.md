@@ -2,10 +2,7 @@
 
 Todays challenge will be going over simple linux commands to move around within the cluster, read and manipulate files. 
 
-To start, log in to the Xanadu cluster using the following command and enter your password when prompted:
-```
-ssh <yourusername>@xanadu-submit-ext.cam.uchc.edu 
-```
+To start, log in to the Xanadu cluster and enter your password when prompted, also make sure to start an interactive session and check that you are in an interactive session by typing `hostname` and checking that it looks like `xanadu-##`. If you have forgotten how to start an interactive session, check the [xanadu and slurm](xanadu_and_slurm.md) page. 
 
 1. make sure you are in your home directory using  `pwd`
 2. list the files in your current directory using `ls`
@@ -24,5 +21,18 @@ ssh <yourusername>@xanadu-submit-ext.cam.uchc.edu
 16. copy the file "monday.fasta" but rename it to "monday.txt" using `cp <file_to_copy> ./<copied_file_new_name>`
 17. copy the file "monday.fasta" using `cp` but rename it to "tuesday.txt" using `mv`
 18. change the permissions on the file "tuesday.txt" to be read, write, and executable by all users. Check the permissions using `ls -l`. After checking that the permissions are correct, remove the file using the `rm` command.
-19. using either vim or nano open one of the empty text files you created in "monday" (like test1.txt) and 
+19. using nano open one of the empty text files you created in "monday" (like test1.txt) paste the following text:
+
+```
+In a hole in the ground there lived a hobbit.
+Not a nasty, dirty, wet hole, filled with the ends of worms and an oozy smell, nor yet a dry, bare, sandy hole with nothing in it to sit down on or to eat: it was a hobbit-hole and that means comfort.
+It had a perfectly round door like a porthole, painted green, with a shiny yellow brass knob in the exact middle.
+The door opened on to a tube-shaped hall like a tunnel: a very comfortable tunnel without smoke, with panelled walls, and floorstiled and carpeted, provided with polished chairs, and lots and lots of pegs forhats and coats - the hobbit was fond of visitors.
+The tunnel wound on and on,going fairly but not quite straight into the side of the hill - The Hill, as all thepeople for many miles round called it - and many little round doors opened outof it, first on one side and then on another.
+No going upstairs for the hobbit:bedrooms, bathrooms, cellars, pantries (lots of these), wardrobes (he had wholerooms devoted to clothes), kitchens, dining-rooms, all were on the same floor,and indeed on the same passage.
+The best rooms were all on the left-hand side(going in), for these were the only ones to have windows, deep-set roundwindows looking over his garden and meadows beyond, sloping down to theriver.
+This hobbit was a very well-to-do hobbit, and his name was Baggins.
+```
 20. 
+21. 
+22. 
