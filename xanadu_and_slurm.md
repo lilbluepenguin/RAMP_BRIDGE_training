@@ -74,8 +74,8 @@ This includes
 #SBATCH -N 1
 #SBATCH -n 1
 #SBATCH -c 1
-#SBATCH --partition=general
-#SBATCH --qos=general
+#SBATCH --partition=mcbstudent
+#SBATCH --qos=mcbstudent
 #SBATCH --mail-type=END
 #SBATCH --mem=1G
 #SBATCH --mail-user=
