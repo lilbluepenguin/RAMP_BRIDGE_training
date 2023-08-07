@@ -18,9 +18,14 @@ To start, log in to the Xanadu cluster and enter your password when prompted, al
 
 8. navigate back up to your home directory using `cd` and the relative path `../`
 
-9. download the file "monday.fasta" from this github repository and use your FTP client (FileZilla or Cyberduck) to upload this fasta file to the directory "monday"
+9. download the file "monday.fasta" from this github repository and use your FTP client (Cyberduck) to upload this fasta file to the directory "monday"
 
-10. while in your home directory, list the contents of the subdirectory "monday" by using `ls monday/`. You should now see the file "monday.fasta" in the directory.
+10. while in your home directory, list the contents of the subdirectory "monday" by using `ls monday/`. You should now see the file "monday.fasta" in the directory. 
+
+If you are unable to transfer using CyberDuck, you can copy it to your current directory by using 
+```
+cp /core/labs/Wegrzyn/akriti/ramp_challenge/monday/monday.fasta .
+```
 
 11. from anywhere, you can list the contents of your home directory using `ls ~` as the `~` represents your home directory.
 
@@ -61,6 +66,12 @@ wget https://ftp.ensembl.org/pub/release-110/gff3/caenorhabditis_elegans/Caenorh
 gunzip Caenorhabditis_elegans.WBcel235.110.chromosome.I.gff3.gz
 ```
 You should end up with a file called `Caenorhabditis_elegans.WBcel235.110.chromosome.I.gff3` 
+
+If you are short on time or unable to download the file using a script, you can copy the file using 
+```
+cp /core/labs/Wegrzyn/akriti/ramp_challenge/monday/Caenorhabditis_elegans.WBcel235.110.chromosome.I.gff3 .
+```
+
 
 21. Use `grep` to create a file with all the lines matching the word "gene". What do you notice about this file? 
 
