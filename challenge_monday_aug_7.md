@@ -53,7 +53,7 @@ The best rooms were all on the left-hand side(going in), for these were the only
 This hobbit was a very well-to-do hobbit, and his name was Baggins.
 ```
 
-20. Wooo now lets apply this to something biologically related. Make sure we are still in the subdirectory "monday". Paste the example SLURM header from [xanadu and slurm](xanadu_and_slurm.md) into a file called `ensembledownload.sh, change the jobname to `download_gff3` and give the job 4GB of memory and leave it at 1 CPU. In the body of the script, type:
+20. Wooo now lets apply this to something biologically related. Make sure we are still in the subdirectory "monday". Paste the example SLURM header from [xanadu and slurm](xanadu_and_slurm.md) into a file called `ensembledownload.sh`, change the jobname to `download_gff3` and give the job 4GB of memory and leave it at 1 CPU. In the body of the script, type:
 ```
 hostname
 
