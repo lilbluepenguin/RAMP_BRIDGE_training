@@ -1,9 +1,11 @@
+## Additional challenging exercises for those with more background with linux/command line, or those who finished the regular challenge and want to try something that asks you to think on your own and use your resources/the internet to help solve these 
+
 ## Exercise 1
 Use the criteria below to print the appropriate lines from /core/labs/Wegrzyn/RAMP_Examples/haiku.txt:
-- lines that begin with the letter s
-- lines that end in the letter d
-- lines that begin and end with the letters s and d
-- lines with words that begin with the letter n
+1. lines that begin with the letter s
+2. lines that end in the letter d
+3. lines that begin and end with the letters s and d
+4. lines with words that begin with the letter n
 
 ## Exercise 2
 Create a shell script, called haiku.sh that does the following:
