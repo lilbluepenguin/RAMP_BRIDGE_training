@@ -1,6 +1,6 @@
 # During your downtime today, review the following tutorials on awk and sed, you can skip the section "Environment" for both
 
-Feel free to read additional parts of the tutorial, but I have linked sections you should review here. These links will also be handy to reference back to for Wednesday's challenge 
+Feel free to read additional parts of the tutorial, but I have linked sections you should review here. These links will also be handy to reference back to for a future file manipulation challenge
 
 ### awk 
 [tutorial](https://www.tutorialspoint.com/awk/index.htm)
