@@ -30,3 +30,6 @@ Tuesday August 8th
 
 Wednesday August 9th 
 - [review one-liners (awk, grep, sed)](review_awk_and_sed.md)
+
+Thursday August 10th
+- [awk and sed challenge](fun_with_files.md)
