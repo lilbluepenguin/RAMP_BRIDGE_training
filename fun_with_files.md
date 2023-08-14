@@ -23,7 +23,7 @@ grep -c "g3" test.pep
 grep -n "g3" test.pep
 ```
 
-[For more information on regex (regular expressions) to match patterns[(https://www.gnu.org/software/grep/manual/html_node/Regular-Expressions.html)
+[For more information on regex (regular expressions) to match patterns](https://www.gnu.org/software/grep/manual/html_node/Regular-Expressions.html)
 
 **Search how many lines contain `Nintendo` in `vgsales50.csv`**
 
