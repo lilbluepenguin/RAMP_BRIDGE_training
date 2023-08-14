@@ -14,9 +14,16 @@
 
 grep (**g**lobal **r**egular **e**xpression **p**rint) searches input files for a search string, and prints the lines that match it.
 
+The simplest grep command is `grep [options] "PATTERN" [file]`
 
+The following command matches all instances of "g3" in the file test.pep and prints those lines. The option `-c` tells grep to only print the number of lines with a match. The option `-n` tells grep to print the line numbers of each line containing a matching pattern.
+```
+grep "g3" test.pep
+grep -c "g3" test.pep
+grep -n "g3" test.pep
+```
 
-
+**Search how many lines contain `Nintendo` in `vgsales50.csv`**
 
 ## sed
 
