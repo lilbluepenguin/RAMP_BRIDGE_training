@@ -8,6 +8,16 @@
 4. move into `file_fun`
 5. copy the files `/home/FCAM/ramp/files/vgsales50.csv`, `/home/FCAM/ramp/files/arabidopsis.gtf`, and `/home/FCAM/ramp/files/test.pep` into your current directory `file_fun`
 
+
+
+## grep
+
+grep (**g**lobal **r**egular **e**xpression **p**rint) searches input files for a search string, and prints the lines that match it.
+
+
+
+
+
 ## sed
 
 sed stands for Stream EDitor and it is used to parse and transform text. 
@@ -38,10 +48,35 @@ sed 's/Nintendo/NINTENDO/g' vgsales50.tsv | head
 
 **Now try converting all instances of the lowercase `exon` into uppercase `EXON` in the file arabidopsis.gtf, pipe to head to see your results.**
 
+<p>
+<details>
+<summary>hint</summary>
+<pre><code>
+sed ‘s/exon/EXON/’ arabidopsis.gtf | head
+</code></pre>
+</details>
+</p>
+
 You can also modify the file "in place" with the option `-i`. **What happens to the file arabidopsis.gtf after executing the following command?**
 ```
 sed -i ‘s/transcript:AT/transcript:arabi/’ arabidopsis.gtf
 ``` 
+Another usedful application of sed is removing/deleting lines matching a certain pattern. The following command removes all lines containing "Nintendo", how many games are left?
+```
+sed '/Nintendo/d' vgsales50.
+```
+
+**Now try removing all lines matching `"transcript:arabi1G01010.1"` in `arabidopsis.gtf`**
+
+<p>
+<details>
+<summary>hint</summary>
+<pre><code>
+sed -i ‘/"transcript:arabi1G01010.1"/d’ arabidopsis.gtf
+</code></pre>
+</details>
+</p>
+
 
 ## awk 
 `awk` is a domain-specific language designed for text processing and typically used as a data extraction and reporting tool. It can be used for a variety of applications.
@@ -71,6 +106,8 @@ awk 'BEGIN{FS=","}{print $1, $2, $3, $4}' vgsales50.csv | head
 awk 'BEGIN{FS=","; OFS="\t"}{print $1, $2, $3, $4}' vgsales50.csv | head
 ```  
 
+The second command, if sent to a file rather than being piped to head, would do the same thing as `sed 's/,/\t/g' vgsales50.csv > vgsales50.tsv`
+
 **Piping the output of `awk`** 
 The following command counts the number of times each feature appears in the .gtf file
 
@@ -85,3 +122,8 @@ awk -F'\t' '$3 == "transcript" { print $9 }' arabidopsis.gtf | head
 ```
 **Now try printing column 9 if column 3 is `gene`**
 
+
+
+
+
+## [Helpful one-liners](https://github.com/stephenturner/oneliners)
