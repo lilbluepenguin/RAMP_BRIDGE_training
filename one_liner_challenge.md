@@ -15,4 +15,5 @@ If you are having trouble transfering the file through Cyberduck, you can copy i
 6. To remove line breaks in a fasta file (to have one sequence per line) but keep line break in between header and sequence
 7. Sample the first 200 bases from all sequences in `test.pep.fasta` 
 8. Remove everything after the first space at each line to simplify the fasta headers in `monday.fasta`
+9. Copy files to a new folder file_fun2 from a text file with file names, the text file can be found at `/core/labs/Wegrzyn/akriti/ramp_challenge/to_copy/files_to_copy.txt`
 
