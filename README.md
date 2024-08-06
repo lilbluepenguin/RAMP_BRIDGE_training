@@ -6,65 +6,45 @@ Welcome to the UConn Research and Mentoring for Postbaccalaureates Program! Duri
 
 Here you will find training materials, self-guided challenges, and links to tutorials and other resources. If you have any questions about this training material during the BRIDGE program, feel free to share them over slack. 
 
-### Bridge 2024 Computational training schedule 
+### Bridge 2024 Computational training schedule (short = 1hour, long=2.5hour)
 
 #### Week 2
-Monday August 5 (long)
+Monday August 5 (long) [slides](https://drive.google.com/file/d/1TNgQlOJMmXI2XxdloWZemtlsbpM3B0ug/view?usp=sharing)
 - HPC
 - command line basics
 - intro to linux
 
-Tuesday August 6 (short)
+Tuesday August 6 (short) [slides](https://drive.google.com/file/d/15NLszzE8Vwvdh5IvqAgfHkGMx3dvr5IF/view?usp=sharing)
 - setting up CAM/Xanadu accounts
 - practicing basic linux commands to make/edit files/directories  
 
-Wednesday August 7 (long)
+Wednesday August 7 (long) [slides]()
 - connecting to Xanadu
   - running/checking jobs
   - interactive sessions
   - slurm scripts
-- 
- 
-    
-- sequencing technologies
-- file formats
+- linux commands 
 - file manipulation using one-liners
-- slurm scripts
-- 
 
-Thursday August 8 (short) 
+
+Thursday August 8 (short)
+- sequencing technologies
+- genome data file formats
 - 
-- t
-- g
-- g
 
 Friday August 9
-- r
-- d
-- d
+
 
 #### Week 3
 Monday August 12 
-- HPC
 
 Tuesday August 13
-- setting up CAM/Xanadu accounts
-- practicing basic linux command
 
 Wednesday August 14
-- connecting to Xanadu
-- slurm scripts
 
 Thursday August 15
-- t
-- t
-- g
-- g
 
 Friday August 16
-- r
-- d
-- d
 
 
 #### Week 4
