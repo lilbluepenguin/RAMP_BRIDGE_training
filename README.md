@@ -18,8 +18,8 @@ Tuesday August 6 (short) [slides](https://drive.google.com/file/d/15NLszzE8Vwvdh
 - setting up CAM/Xanadu accounts
 - practicing basic linux commands to make/edit files/directories  
 
-Wednesday August 7 (long) [slides]()
-- connecting to Xanadu
+Wednesday August 7 (long) [slides](https://drive.google.com/file/d/1nPtX6bjiJMxvwkyWc81Ihy8x3gpdCU9w/view?usp=sharing)
+- [connecting to Xanadu](xanadu_and_slurm.md)
   - running/checking jobs
   - interactive sessions
   - slurm scripts
