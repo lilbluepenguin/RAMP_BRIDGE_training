@@ -102,7 +102,7 @@ sbatch [scriptname]
 ```
 squeue
 ```
-It should look something like this, but with all jobs across users. If you want only your job use `squeue -user [username]`:
+It should look something like this, but with all jobs across users. If you want only your job use `squeue -u [username]`:
 ```
 JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
 7009065   general stringti abhattar PD       0:00      1 (Priority)
@@ -246,7 +246,7 @@ crbm          up   infinite      1   idle xanadu-55
     ```
 - submit your script using `sbatch`
   
-- check on your running jobs with `squeue`
+- check on your running jobs with `squeue -u [username]`
   
 - Your job might finish before you even get a chance to check, so check on the recently completed job using `sacct`
   
@@ -296,7 +296,7 @@ fastqc PTK1_mRNASeq_S27_R1.fastq.gz
   
 - submit the example script `fastqc.sh` using `sbatch`
   
-- check on the running job using `squeue -user [username] `, if it is still in the queue (says PD for job status) wait a minute and type `squeue -user [username]` again to see if it has started running
+- check on the running job using `squeue -u [username] `, if it is still in the queue (says PD for job status) wait a minute and type `squeue -u [username]` again to see if it has started running
 
 - check on the resources used by the job after it's done running using `seff`
 
