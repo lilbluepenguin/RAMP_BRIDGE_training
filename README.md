@@ -28,9 +28,7 @@ Wednesday August 7 (long) [slides](https://drive.google.com/file/d/1nPtX6bjiJMxv
 
 
 Thursday August 8 (short)
-- sequencing technologies
-- genome data file formats
-- 
+
 
 Friday August 9
 
@@ -65,7 +63,7 @@ Wednesday August
 
 
 
-### 2023 General Schedule
+### 2023 General Schedule (IGNORE THIS)
 Wednesday August 2nd
 - logistics and getting settled
 - downloading software 
