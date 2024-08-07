@@ -254,9 +254,8 @@ crbm          up   infinite      1   idle xanadu-55
 
 
 ***Running a real job***
-- create a file called `fastqc.sh`
-
 - copy the file `/core/labs/Wegrzyn/ConGenExample/PTK1_mRNASeq_S27_R1.fastq.gz` to your home directory
+  `cp /core/labs/Wegrzyn/ConGenExample/PTK1_mRNASeq_S27_R1.fastq.gz ./`
 
 - open `fastqc.sh` with nano and paste the following script
 <p>
