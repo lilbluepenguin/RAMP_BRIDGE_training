@@ -4,7 +4,7 @@
 ## command to start an interactive session:
 When you first log into Xanadu, you are on the head node or login node. YOU **DO NOT** WANT TO DO ANY WORK HERE. This will slow down the node for **EVERYONE** which we do not want. Instead, you want to start an interactive session using the command `srun` as shown below. You can adjust the memory you want to allocate to this interactive session with the `--mem=` flag. For partition, you will usually use `general`
 ```
-srun --partition=[partition] --qos=[qos] --mem=2G --pty bash
+srun --partition=general --qos=general --mem=2G --pty bash
 ```
 
 ## Loading software on Xanadu
@@ -74,8 +74,8 @@ This includes
 #SBATCH -N 1
 #SBATCH -n 1
 #SBATCH -c 1
-#SBATCH --partition=mcbstudent
-#SBATCH --qos=mcbstudent
+#SBATCH --partition=general
+#SBATCH --qos=general
 #SBATCH --mail-type=END
 #SBATCH --mem=1G
 #SBATCH --mail-user=
@@ -102,7 +102,7 @@ sbatch [scriptname]
 ```
 squeue
 ```
-It should look something like this:
+It should look something like this, but with all jobs across users. If you want only your job use `squeue -user [username]`:
 ```
 JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
 7009065   general stringti abhattar PD       0:00      1 (Priority)
@@ -111,7 +111,7 @@ JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
 
 ## command to check on job accounting data for your jobs: 
 ```
-sacct
+sacct 
 ```
 It should look something like this:
 ```
@@ -211,22 +211,38 @@ crbm          up   infinite      1   idle xanadu-55
 - open `test_script.sh` using `nano`
   
 - paste in the default SLURM header
+<p>
+<details>
+<summary>default header</summary>
+<pre><code>
+#!/bin/bash
+#SBATCH --job-name=test_job
+#SBATCH -N 1
+#SBATCH -n 1
+#SBATCH -c 1
+#SBATCH --partition=general
+#SBATCH --qos=general
+#SBATCH --mail-type=END
+#SBATCH --mem=1G
+#SBATCH --mail-user=
+#SBATCH -o %x_%j.out
+#SBATCH -e %x_%j.err
+</code></pre>
+</details>
+</p>
+
+- make sure the partition is `general` and qos is `general`
   
-- set partition to `mcbstudent` and qos to `mcbstudent`
-  
-- edit the header to reflect 1 cpu and 1 GB of memory
-  
-- set the err file name to test_error_%j.err
-  
-- set the out file name to test_error_%j.out
+- edit the header to reflect 1 cpu and 1 GB of memory if not already
+
+- add your email 
   
 - in your script, after the last line of the header, type
     ```
     echo "hostname: `hostname`"
     echo "date: `date`"
 
-    touch newfile.txt
-    echo "this is a new file" >> newfile.txt
+    echo "this is a new file" > newfile.txt
     ```
 - submit your script using `sbatch`
   
@@ -235,17 +251,51 @@ crbm          up   infinite      1   idle xanadu-55
 - Your job might finish before you even get a chance to check, so check on the recently completed job using `sacct`
   
 - check on the resources used using `seff`
-  
-- copy the file `/core/labs/Wegrzyn/ConGenExample/fastqc.sh`
+
+
+***Running a real job***
+- create a file called `fastqc.sh`
+
+- copy the file `/core/labs/Wegrzyn/ConGenExample/PTK1_mRNASeq_S27_R1.fastq.gz` to your home directory
+
+- open `fastqc.sh` with nano and paste the following script
+<p>
+<details>
+<summary>fastqc.sh</summary>
+<pre><code>
+#!/bin/sh
+#SBATCH --job-name=JobName
+#SBATCH -N 1
+#SBATCH -n 1
+#SBATCH -c 12
+#SBATCH --partition=general
+#SBATCH --qos=general
+#SBATCH --mail-type=end
+#SBATCH --mem=50G
+#SBATCH --mail-user=first.last@uconn.edu
+#SBATCH -o %x_%j.out
+#SBATCH -e %x_%j.err
+
+echo `hostname`
+
+module load fastqc/0.11.7 
+
+fastqc PTK1_mRNASeq_S27_R1.fastq.gz
+
+</code></pre>
+</details>
+</p>
   
 - edit the script to have your email in place of `first.last@uconn.edu` in the SLURM header
+
+- change the job name to "test_fastqc"
+
+- change the number cores to 6
+
+- change the memory requested to 25G
   
 - submit the example script `fastqc.sh` using `sbatch`
   
-- check on the running job using `squeue`, if it is still in the queue (says PD for job status) wait a minute and type `squeue` again to see if it has started running
-  
-- cancel the job submitted with the example script using `scancel [jobid]`
-  
-- check on your jobs again using `sacct`
+- check on the running job using `squeue -user [username] `, if it is still in the queue (says PD for job status) wait a minute and type `squeue -user [username]` again to see if it has started running
 
-- check on the resources used by the job using `seff`
+- check on the resources used by the job after it's done running using `seff`
