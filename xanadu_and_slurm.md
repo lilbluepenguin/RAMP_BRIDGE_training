@@ -299,3 +299,8 @@ fastqc PTK1_mRNASeq_S27_R1.fastq.gz
 - check on the running job using `squeue -user [username] `, if it is still in the queue (says PD for job status) wait a minute and type `squeue -user [username]` again to see if it has started running
 
 - check on the resources used by the job after it's done running using `seff`
+
+- to transfer the file to your local computer to open the HTML file in your web browser use terminal or powershell to navigate to the folder you want to download to on your local computer. Then use the command below to use scp to copy the file
+  ```
+  scp [user]@transfer.cam.uchc.edu:/home/FCAM/user/path/PTK1_mRNASeq_S27_R1_fastqc.html ./
+  ```
