@@ -199,11 +199,11 @@ crbm          up   infinite      1   idle xanadu-55
 
 - use the command `module avail` to see all of the modules available
 
-- load the module `seqkit/2.2.0` using `module load`
+- load the module `seqkit/2.2.0` using `module load [modulename]`
 
 - use `module list` to check that the module is loaded *(optional: type `seqkit` and see what information it prints out about the software)*
   
-- use `module unload` to unload the module
+- use `module unload [modulename]` to unload the module
 
 **part 2: writing scripts**
 - create a file named `test_script.sh`
