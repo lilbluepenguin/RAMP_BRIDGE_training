@@ -25,8 +25,9 @@ Wednesday August 7 (long) [slides](https://drive.google.com/file/d/1nPtX6bjiJMxv
   - slurm scripts
 - introduction to file formats
 
-Thursday August 8 (short)
-- 
+Thursday August 8 (short) [slides](https://drive.google.com/file/d/1LGu9hmpFm-YLDARWnbF_Ujr0SMLdqDXc/view?usp=sharing)
+- review of linux command structure
+- Omics data and databases
 
 Friday August 9
 - file manipulation using one-liners
