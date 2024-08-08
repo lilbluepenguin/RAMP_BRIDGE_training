@@ -8,9 +8,9 @@ To start, log in to the Xanadu cluster and enter your password when prompted, al
 
 2. list the files in your current directory using `ls`
 
-3. make a new subdirectory called "monday" using `mkdir`
+3. make a new subdirectory called "monday" using `mkdir monday`
 
-4. enter the subdirectory "monday" using `cd`
+4. enter the subdirectory "monday" using `cd monday`
 
 5. make three files in this subdirectory using `touch`, make sure to use different names for the file, like test1.txt, test2.txt, test3.txt, or whatever you choose to name them.
 
@@ -33,9 +33,9 @@ cp /core/labs/Wegrzyn/akriti/ramp_challenge/monday/monday.fasta .
 
 13. navigate to the "monday" directory again, your file "monday.fasta" should be in this directory.
 
-14. view the contents of the file "monday.fasta" using `head`, `tail`, and `less`.
+14. view the contents of the file "monday.fasta" using `head monday.fasta`, `tail monday.fasta`, and `less monday.fasta`.
 
-15. use `head` and `tail` again but use the -n flag to specify a different number of lines from the default
+15. use `head` and `tail` again but use the -n option to specify a different number of lines from the default
 
 16. copy the file "monday.fasta" but rename it to "monday.txt" using `cp <file_to_copy> ./<copied_file_new_name>`
 
