@@ -23,15 +23,13 @@ Wednesday August 7 (long) [slides](https://drive.google.com/file/d/1nPtX6bjiJMxv
   - running/checking jobs
   - interactive sessions
   - slurm scripts
-- linux commands 
-- file manipulation using one-liners
-
+- introduction to file formats
 
 Thursday August 8 (short)
-
+- 
 
 Friday August 9
-
+- file manipulation using one-liners
 
 #### Week 3
 Monday August 12 
