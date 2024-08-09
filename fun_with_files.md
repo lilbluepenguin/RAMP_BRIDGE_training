@@ -51,7 +51,7 @@ head vgsales_top50.tsv
 The output can also be **piped** using **\|** to `head` directly so the output prints directly into the terminal rather than saving the output into a file and then using head. This will not store any of your changes to the file, instead, it will pass the standard output of the first command to the standard input of the second command. In the following command, we pipe the output of `sed` directly to the `head` command.
 
 ```
-sed 's/,/\t/g' vgsales_top50.txt | head 
+sed 's/,/\t/g' vgsales_top50.tsv | head 
 ```
 
 **Now try**
