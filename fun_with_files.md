@@ -11,7 +11,7 @@
 
 ## grep
 
-grep (**g**lobal **r**egular **e**xpression **p**rint) searches input files for a search string, and prints the lines that match it.
+grep (**g**lobal **r**egular **e**xpression **p**rint) searches input files for a search string, and prints the lines that match it. [More comprehensive tutorial](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
 
 The simplest grep command is `grep [options] "PATTERN" [file]`
 
@@ -37,7 +37,7 @@ grep -c "Nintendo" vgsales_top50.csv
 
 ## sed
 
-sed stands for Stream EDitor and it is used to parse and transform text. 
+sed stands for Stream EDitor and it is used to parse and transform text. [tutorial links](review_awk_and_sed.md)
 
 One of the most useful applications of sed is to "find and replace", but you can do much more with sed. You can find a full list of all the commands [here](https://www.gnu.org/software/sed/manual/sed.html#sed-commands-list)
 
@@ -96,7 +96,7 @@ sed -i ‘/"transcript:arabi1G01010.1"/d’ arabidopsis.gtf
 
 
 ## awk 
-`awk` is a domain-specific language designed for text processing and typically used as a data extraction and reporting tool. It can be used for a variety of applications.
+`awk` is a domain-specific language designed for text processing and typically used as a data extraction and reporting tool. It can be used for a variety of applications. [tutorial links](review_awk_and_sed.md)
 
 One of this is viewing or extracting certain columns from a file.
 
