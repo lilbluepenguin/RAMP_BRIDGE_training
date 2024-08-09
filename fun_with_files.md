@@ -163,6 +163,7 @@ Here the options are `-type f` meaning I only want it to print out files, not di
 `find /home/FCAM/abhattarai -type f -name "*.txt"` 
 
 [***cut***](https://www.baeldung.com/linux/cut-command)
+
 `cut [options] [file_to_process]`
 
 
