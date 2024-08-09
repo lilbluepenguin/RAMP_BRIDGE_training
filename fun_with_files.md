@@ -6,7 +6,7 @@
 2. start an interactive session (hint `srun --partition=general --qos=general --mem=2G --pty bash`)
 3. make a directory called `file_fun` (hint `mkdir file_fun`)
 4. move into `file_fun` (hint `cd file_fun`)
-5. copy the files `/home/FCAM/abhattarai/ramp_challenge/2024/vgsales_top50.csv`, `/home/FCAM/abhattarai/ramp_challenge/2024/arabidopsis.gtf`, and `/home/FCAM/abhattarai/ramp_challenge/2024/test.pep` into your current directory `file_fun` (hint `cp [path_to_file] ./`)
+5. copy the files `/core/labs/Wegrzyn/akriti_temp_ramp/vgsales_top50.csv`, `/core/labs/Wegrzyn/akriti_temp_ramp/arabidopsis.gtf`, and `/core/labs/Wegrzyn/akriti_temp_ramp/test.pep` into your current directory `file_fun` (hint `cp [path_to_file] ./`)
 
 
 ## grep
