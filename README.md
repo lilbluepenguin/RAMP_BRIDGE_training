@@ -31,7 +31,7 @@ Thursday August 8 (short) [slides](https://drive.google.com/file/d/1LGu9hmpFm-YL
 
 Friday August 9
 - [awk and sed tutorial page](review_awk_and_sed.md)
-- [file manipulation using one-liners](one_liner_challenge.md)
+- [file manipulation using one-liners](fun_with_files.md)
   
 
 #### Week 3
