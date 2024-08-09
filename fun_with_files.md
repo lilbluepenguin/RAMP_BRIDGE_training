@@ -3,10 +3,10 @@
 
 
 1. log in to xanadu and make sure you are in your home directory
-2. start an interactive session
-3. make a directory called `file_fun`
-4. move into `file_fun`
-5. copy the files `/home/FCAM/ramp/files/vgsales50.csv`, `/home/FCAM/ramp/files/arabidopsis.gtf`, and `/home/FCAM/ramp/files/test.pep` into your current directory `file_fun`
+2. start an interactive session (hint `srun --partition=general --qos=general --mem=2G --pty bash`)
+3. make a directory called `file_fun` (hint `mkdir file_fun`)
+4. move into `file_fun` (hint `cd file_fun`)
+5. copy the files `/home/FCAM/abhattarai/ramp_challenge/2024/vgsales_top50.csv`, `/home/FCAM/abhattarai/ramp_challenge/2024/arabidopsis.gtf`, and `/home/FCAM/abhattarai/ramp_challenge/2024/test.pep` into your current directory `file_fun` (hint `cp [path_to_file] ./`)
 
 
 ## grep
@@ -25,6 +25,15 @@ grep -n "g3" test.pep
 [For more information on regex (regular expressions) to match patterns](https://www.gnu.org/software/grep/manual/html_node/Regular-Expressions.html)
 
 **Search how many lines contain `Nintendo` in `vgsales_top50.csv`**
+
+```
+grep "Nintendo" vgsales_top50.csv
+```
+***Only output the number of matches to `Nintendo`***
+
+```
+grep -c "Nintendo" vgsales_top50.csv
+```
 
 ## sed
 
@@ -114,7 +123,7 @@ awk 'BEGIN{FS=","}{print $1, $2, $3, $4}' vgsales_top50.csv | head
 awk 'BEGIN{FS=","; OFS="\t"}{print $1, $2, $3, $4}' vgsales_top50.csv | head
 ```  
 
-The second command, if sent to a file rather than being piped to head, would do the same thing as `sed 's/,/\t/g' vgsales50.csv > vgsales50.tsv`
+The second command, if sent to a file rather than being piped to head, would do the same thing as `sed 's/,/\t/g' vgsales_top50.csv > vgsales_top50.tsv`
 
 **Piping the output of `awk`** 
 The following command counts the number of times each feature appears in the .gtf file
@@ -124,11 +133,20 @@ awk -F'\t' '{print $3}' arabidopsis.gtf | sort | uniq -c
 ```
 **How many features are there and how many times does each appear?**
 
-You can also use conditional statements with awk like `if` and `if else`. The following command prints column 9 if the entry in column 3 is `transcript`
+You can also use conditional statements with awk like `if` and `if else`. The following command prints column 9 if the entry in column 3 is `transcript` (`$3 == "transcript"` means if true that column 3 is exactly "transcript", print column 9)
 ```
 awk -F'\t' '$3 == "transcript" { print $9 }' arabidopsis.gtf | head
 ```
 **Now try printing column 9 if column 3 is `gene`**
+
+<p>
+<details>
+<summary>hint</summary>
+<pre><code>
+awk -F'\t' '$3 == "gene" { print $9 }' arabidopsis.gtf | head
+</code></pre>
+</details>
+</p>
 
 
 
