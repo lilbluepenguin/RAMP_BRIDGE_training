@@ -53,13 +53,11 @@ The output can also be **piped** using **\|** to `head` directly so the output p
 ```
 sed 's/,/\t/g' vgsales_top50.tsv | head 
 ```
-```
-
 
 
 **Now try**
-- what happens if you ommit the `g` flag in substitute command? `sed 's/,/\t/' vgsales_top50.tsv | head`
-- what happens if you replace the `g` with 5? `sed 's/,/\t/5' vgsales_top50.tsv | head`
+- what happens if you ommit the `g` flag in substitute command? `sed 's/,/\t/' vgsales_top50.csv | head`
+- what happens if you replace the `g` with 5? `sed 's/,/\t/5' vgsales_top50.csv | head`
 
 Note that sed is case sensitive: 
 ```
