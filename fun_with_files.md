@@ -148,8 +148,22 @@ awk -F'\t' '$3 == "gene" { print $9 }' arabidopsis.gtf | head
 </details>
 </p>
 
+## other commands
 
+[***sort***](https://www.redhat.com/sysadmin/sort-command-linux)
 
+`sort [file_to_sort]`
+
+[***find***](https://www.redhat.com/sysadmin/linux-find-command)
+
+`find [path_to_search_in] [options] [expression]`
+
+Here the options are `-type f` meaning I only want it to print out files, not directories, and `-name "*txt"` means only print files matching that pattern, meaning any file ending in .txt)
+
+`find /home/FCAM/abhattarai -type f -name "*.txt"` 
+
+[***cut***](https://www.baeldung.com/linux/cut-command)
+`cut [options] [file_to_process]`
 
 
 ## [Helpful one-liners](https://github.com/stephenturner/oneliners)
