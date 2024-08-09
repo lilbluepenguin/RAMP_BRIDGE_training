@@ -30,7 +30,9 @@ Thursday August 8 (short) [slides](https://drive.google.com/file/d/1LGu9hmpFm-YL
 - Omics data and databases
 
 Friday August 9
-- file manipulation using one-liners
+- [awk and sed tutorial page](review_awk_and_sed.md)
+- [file manipulation using one-liners](one_liner_challenge.md)
+  
 
 #### Week 3
 Monday August 12 
