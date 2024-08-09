@@ -2,12 +2,11 @@
 **[Here](review_awk_and_sed.md) is the link to the awk and sed tutorial pages. Make sure to at least review these before attempting the following exercises**
 
 
-1. log in to xanadu and make sure you are in your home directory `/home/FCAM/ramp/usr#`
-2. start an interactive session 
+1. log in to xanadu and make sure you are in your home directory
+2. start an interactive session
 3. make a directory called `file_fun`
 4. move into `file_fun`
 5. copy the files `/home/FCAM/ramp/files/vgsales50.csv`, `/home/FCAM/ramp/files/arabidopsis.gtf`, and `/home/FCAM/ramp/files/test.pep` into your current directory `file_fun`
-
 
 
 ## grep
@@ -25,7 +24,7 @@ grep -n "g3" test.pep
 
 [For more information on regex (regular expressions) to match patterns](https://www.gnu.org/software/grep/manual/html_node/Regular-Expressions.html)
 
-**Search how many lines contain `Nintendo` in `vgsales50.csv`**
+**Search how many lines contain `Nintendo` in `vgsales_top50.csv`**
 
 ## sed
 
@@ -37,13 +36,13 @@ The sed command for substitution or "find and replace" goes `'s/pattern to match
 
 The following command replaces all commas with tabs, changing a comma seperated file into a tab seperated file. Use head to see what the first ten lines of the new file looks like 
 ```
-sed 's/,/\t/g' vgsales50.csv > vgsales50.tsv
-head vgsales50.tsv
+sed 's/,/\t/g' vgsales_top50.csv > vgsales_top50.tsv
+head vgsales_top50.tsv
 ```
 The output can also be **piped** using **\|** to `head` directly so the output prints directly into the terminal rather than saving the output into a file and then using head. This will not store any of your changes to the file, instead, it will pass the standard output of the first command to the standard input of the second command. In the following command, we pipe the output of `sed` directly to the `head` command.
 
 ```
-sed 's/,/\t/g' vgsales50.csv | head 
+sed 's/,/\t/g' vgsales_top50.txt | head 
 ```
 
 **Now try**
@@ -52,7 +51,7 @@ sed 's/,/\t/g' vgsales50.csv | head
 
 Note that sed is case sensitive: 
 ```
-sed 's/Nintendo/NINTENDO/g' vgsales50.tsv | head 
+sed 's/Nintendo/NINTENDO/g' vgsales_top50.tsv | head 
 ```
 
 **Now try converting all instances of the lowercase `exon` into uppercase `EXON` in the file arabidopsis.gtf, pipe to head to see your results.**
@@ -72,7 +71,7 @@ sed -i ‘s/transcript:AT/transcript:arabi/’ arabidopsis.gtf
 ``` 
 Another usedful application of sed is removing/deleting lines matching a certain pattern. The following command removes all lines containing "Nintendo", how many games are left?
 ```
-sed '/Nintendo/d' vgsales50.
+sed '/Nintendo/d' vgsales_top50.tsv
 ```
 
 **Now try removing all lines matching `"transcript:arabi1G01010.1"` in `arabidopsis.gtf`**
@@ -102,7 +101,7 @@ awk 'BEGIN{FS="\t"}{print $3}' arabidopsis.gtf | head
 
 You don't have to print columns in order
 ```
-awk 'BEGIN{FS="\t"}{print $4, $5, $1, $3, $2}' vgsales50.tsv | head
+awk 'BEGIN{FS="\t"}{print $4, $5, $1, $3, $2}' vgsales_top50.tsv | head
 ```
 **What order are the columns in?**
 
@@ -111,8 +110,8 @@ You can also use awk to set the field seperator to a comma so you can manipulate
 **Note the difference between the output of the two commands:**
 
 ```
-awk 'BEGIN{FS=","}{print $1, $2, $3, $4}' vgsales50.csv | head
-awk 'BEGIN{FS=","; OFS="\t"}{print $1, $2, $3, $4}' vgsales50.csv | head
+awk 'BEGIN{FS=","}{print $1, $2, $3, $4}' vgsales_top50.csv | head
+awk 'BEGIN{FS=","; OFS="\t"}{print $1, $2, $3, $4}' vgsales_top50.csv | head
 ```  
 
 The second command, if sent to a file rather than being piped to head, would do the same thing as `sed 's/,/\t/g' vgsales50.csv > vgsales50.tsv`
