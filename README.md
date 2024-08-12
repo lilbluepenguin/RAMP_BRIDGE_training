@@ -29,7 +29,7 @@ Thursday August 8 (short) [slides](https://drive.google.com/file/d/1LGu9hmpFm-YL
 - review of linux command structure
 - Omics data and databases
 
-Friday August 9
+Friday August 9 (long)
 - [awk and sed tutorial page](review_awk_and_sed.md)
 - [file manipulation using one-liners](fun_with_files.md)
 - resources:
@@ -40,15 +40,13 @@ Friday August 9
   
 
 #### Week 3
-Monday August 12 
+Monday August 12 (long)
 - [introduction to R basics using Swirl](https://swirlstats.com/students.html)
 - resources:
   - [base R cheat sheet](https://iqss.github.io/dss-workshops/R/Rintro/base-r-cheat-sheet.pdf)
 
-
-
 Tuesday August 13
-- introduction to R
+- introduction to R continued
 
 Wednesday August 14
 
