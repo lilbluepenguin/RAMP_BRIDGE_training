@@ -36,6 +36,9 @@ Friday August 9
 
 #### Week 3
 Monday August 12 
+- [introduction to R basics using Swirl](https://swirlstats.com/students.html)
+- resources:
+  - [base R cheat sheet](https://iqss.github.io/dss-workshops/R/Rintro/base-r-cheat-sheet.pdf)
 
 
 
