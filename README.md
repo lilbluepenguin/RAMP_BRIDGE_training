@@ -36,6 +36,7 @@ Friday August 9
   - [sed commands](https://www.gnu.org/software/sed/manual/html_node/sed-commands-list.html)
   - [sed substitute flags](https://www.gnu.org/software/sed/manual/html_node/The-_0022s_0022-Command.html#The-_0022s_0022-Command)
   - [sed, awk, and regular expressions from 'Practical Computing and Bioinformatics for Conservation and Evolutionary Genomics'](https://eriqande.github.io/eca-bioinf-handbook/sed-awk-and-regular-expressions.html)
+  - [a whole book on awk and sed](http://www.nylxs.com/docs/sedandawk.pdf)
   
 
 #### Week 3
