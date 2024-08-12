@@ -32,6 +32,10 @@ Thursday August 8 (short) [slides](https://drive.google.com/file/d/1LGu9hmpFm-YL
 Friday August 9
 - [awk and sed tutorial page](review_awk_and_sed.md)
 - [file manipulation using one-liners](fun_with_files.md)
+- resources:
+  - [sed commands](https://www.gnu.org/software/sed/manual/html_node/sed-commands-list.html)
+  - [sed substitute flags](https://www.gnu.org/software/sed/manual/html_node/The-_0022s_0022-Command.html#The-_0022s_0022-Command)
+  - [sed, awk, and regular expressions from 'Practical Computing and Bioinformatics for Conservation and Evolutionary Genomics'](https://eriqande.github.io/eca-bioinf-handbook/sed-awk-and-regular-expressions.html)
   
 
 #### Week 3
