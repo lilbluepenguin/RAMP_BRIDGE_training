@@ -37,10 +37,6 @@ Friday August 9
 #### Week 3
 Monday August 12 
 
-[sed commands](https://www.gnu.org/software/sed/manual/html_node/sed-commands-list.html)
-[sed substitute flags](https://www.gnu.org/software/sed/manual/html_node/The-_0022s_0022-Command.html#The-_0022s_0022-Command)
-
-[awk and sed guide](https://eriqande.github.io/eca-bioinf-handbook/sed-awk-and-regular-expressions.html)
 
 
 Tuesday August 13
