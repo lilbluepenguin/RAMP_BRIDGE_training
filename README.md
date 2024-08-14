@@ -42,25 +42,30 @@ Here you will find training materials, self-guided challenges, and links to tuto
 ### Week 3
 
 **Monday August 12 (long)**
-- [introduction to R basics using Swirl](https://swirlstats.com/students.html)
-- resources:
+- [Introduction to R basics using Swirl](https://swirlstats.com/students.html)
+- Resources:
   - [base R cheat sheet](https://iqss.github.io/dss-workshops/R/Rintro/base-r-cheat-sheet.pdf)
 
 **Tuesday August 13**
-- introduction to R continued
+- Introduction to R continued
 
 **Wednesday August 14**
+- Finishing intro to R
+- R Tidyverse
+- Resources/R cheatsheets:
+  - [Data tidying with tidyr](https://rstudio.github.io/cheatsheets/tidyr.pdf)
+  - [Data transformation with dplyr](https://rstudio.github.io/cheatsheets/data-transformation.pdf)
+  - [Data visualization with ggplot2](https://rstudio.github.io/cheatsheets/data-visualization.pdf)
+  - [String manipulation with stringr](https://rstudio.github.io/cheatsheets/strings.pdf)
+  - [additional cheat sheets]
 
 **Thursday August 15**
+- 
 
 **Friday August 16**
 
 
 ### Week 4
-
-Monday August 
-
-Tuesday August
 
 Wednesday August 
 
