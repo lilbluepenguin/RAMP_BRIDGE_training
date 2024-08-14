@@ -52,11 +52,16 @@ Here you will find training materials, self-guided challenges, and links to tuto
 **Wednesday August 14**
 - Finishing intro to R
 - [R Tidyverse](https://www.tidyverse.org/)
-- Resources/R cheatsheets:
-  - [Data tidying with tidyr](https://rstudio.github.io/cheatsheets/tidyr.pdf)
-  - [Data transformation with dplyr](https://rstudio.github.io/cheatsheets/data-transformation.pdf)
-  - [Data visualization with ggplot2](https://rstudio.github.io/cheatsheets/data-visualization.pdf)
-  - [String manipulation with stringr](https://rstudio.github.io/cheatsheets/strings.pdf)
+  - [visualization](https://r4ds.hadley.nz/data-visualize)
+  - [data import](https://r4ds.hadley.nz/data-import)
+  - [data transformation](https://r4ds.hadley.nz/data-transform)
+  - [tidying data](https://r4ds.hadley.nz/data-tidy)
+- Resources/R cheat sheets:
+  - [getting help](https://r4ds.hadley.nz/workflow-help)
+  - [Data tidying with tidyr cheat sheet](https://rstudio.github.io/cheatsheets/tidyr.pdf)
+  - [Data transformation with dplyr cheat sheet](https://rstudio.github.io/cheatsheets/data-transformation.pdf)
+  - [Data visualization with ggplot2 cheat sheet](https://rstudio.github.io/cheatsheets/data-visualization.pdf)
+  - [String manipulation with stringr cheat sheet](https://rstudio.github.io/cheatsheets/strings.pdf)
   - [additional community contributed cheat sheets](https://rstudio.github.io/cheatsheets/contributed-cheatsheets.html)
 
 **Thursday August 15**
