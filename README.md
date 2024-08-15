@@ -46,10 +46,10 @@ Here you will find training materials, self-guided challenges, and links to tuto
 - Resources:
   - [base R cheat sheet](https://iqss.github.io/dss-workshops/R/Rintro/base-r-cheat-sheet.pdf)
 
-**Tuesday August 13**
+**Tuesday August 13 (short)** 
 - Introduction to R continued
 
-**Wednesday August 14**
+**Wednesday August 14 (long)**
 - Finishing intro to R
 - [R Tidyverse](https://www.tidyverse.org/)
   - [visualization](https://r4ds.hadley.nz/data-visualize)
@@ -65,7 +65,8 @@ Here you will find training materials, self-guided challenges, and links to tuto
   - [additional community contributed cheat sheets](https://rstudio.github.io/cheatsheets/contributed-cheatsheets.html)
 
 **Thursday August 15**
-- [Blast tutorial](https://www.jax.org/education-and-learning/high-school-students-and-undergraduates/teaching-the-genome-generation/stem-learning-resources?name=BLAST+Tutorial#)
+- [Genomics education alliance BLAST activity](https://community.gep.wustl.edu/~wilson/intro-blast-human-leptin/exercise/intro_blast_leptin_exercise.html)
+- [Blast: identify an unknown sequence and align between two or more sequences tutorial](https://www.jax.org/-/media/jaxweb/files/education-and-learning/tutorials/blast-written-tutorials_clickable.pdf?rev=d7c9d4d8518c4691853a5f28fd6cd80f)
 
 **Friday August 16**
 
