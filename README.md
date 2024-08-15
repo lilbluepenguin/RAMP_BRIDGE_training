@@ -65,7 +65,7 @@ Here you will find training materials, self-guided challenges, and links to tuto
   - [additional community contributed cheat sheets](https://rstudio.github.io/cheatsheets/contributed-cheatsheets.html)
 
 **Thursday August 15**
-- 
+- [Blast tutorial](https://www.jax.org/education-and-learning/high-school-students-and-undergraduates/teaching-the-genome-generation/stem-learning-resources?name=BLAST+Tutorial#)
 
 **Friday August 16**
 
