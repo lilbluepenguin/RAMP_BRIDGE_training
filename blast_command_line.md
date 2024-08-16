@@ -55,7 +55,7 @@ Once you have the data downloaded, the next step is to make your custom blast da
   module load blast/2.13.0
   
   makeblastdb -in juglans_sequence.fasta -dbtype prot
-  makeblastdb -in araport11_cds_repseq.fa -dbtype nucl
+  makeblastdb -in araport11_cds_repseq.fasta -dbtype nucl
   ```
 - close out of nano and save your file
 - submit the job
@@ -84,8 +84,8 @@ Now that we have our databases we can actually run the aligner!
 echo `hostname`
 module load blast/2.13.0
 
-blastn -num_threads 2 -query unknown_nuc_seq.fa -db araport11_cds_repseq.fa -out unknown_seq_blast_standard_output.txt
-blastn -num_threads 2 -query unknown_nuc_seq.fa -db araport11_cds_repseq.fa -outfmt "6" -out unknown_seq_blast_tabular.txt
+blastn -num_threads 2 -query unknown_nuc_seq.fasta -db araport11_cds_repseq.fa -out unknown_seq_blast_standard_output.txt
+blastn -num_threads 2 -query unknown_nuc_seq.fasta -db araport11_cds_repseq.fa -outfmt "6" -out unknown_seq_blast_tabular.txt
 
 blastp -num_threads 2 -query queryseq.fasta -db juglans_sequence.fasta -out juglans_standard_output.txt 
 blastp -num_threads 2 -query queryseq.fasta -db juglans_sequence.fasta -outfmt "6" -out juglans_tabular.txt 
