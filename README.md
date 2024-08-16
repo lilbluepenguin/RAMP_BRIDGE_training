@@ -6,6 +6,8 @@ Welcome to the UConn Research and Mentoring for Postbaccalaureates Program! Duri
 
 Here you will find training materials, self-guided challenges, and links to tutorials and other resources. If you have any questions about this training material during the BRIDGE program, feel free to share them over slack. 
 
+[Computational Biology Core Unix Basics](https://github.com/CBC-UCONN/CBC_Docs/wiki/Unix-Basics)
+
 ## Bridge 2024 Computational training schedule (short = 1hour, long=2.5hour)
 
 ### Week 2
