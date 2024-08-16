@@ -67,20 +67,34 @@ Once you have the data downloaded, the next step is to make your custom blast da
   squeue -u [username]
   ```
 - ***Q. After the job finishes how would you check how much of the requested resources were used?***
+- ***Q. What did the makeblastb command do?*** (hint: look at the files in your directory)
 
+## SUBMITTING BLAST RUNS
 
-##
+Now that we have our databases we can actually run the aligner!
 
+- Start a script named submit_align.sh
+  ```
+  nano submit_align.sh
+  ```
+- Paste in the default header
+- Set your header to request **2 cores**, **8GB of memory**, name the job blast_alignments, and add your email.
+- Under the header, paste in the following code
+```
+echo `hostname`
 module load blast/2.13.0
 
 blastn -num_threads 2 -query unknown_nuc_seq.fa -db araport11_cds_repseq.fa -out unknown_seq_blast_standard_output.txt
 blastn -num_threads 2 -query unknown_nuc_seq.fa -db araport11_cds_repseq.fa -outfmt "6" -out unknown_seq_blast_tabular.txt
 
-echo -e "\nEnd time:"
-date
+blastp -num_threads 2 -query queryseq.fasta -db juglans_sequence.fasta -out juglans_standard_output.txt 
+blastp -num_threads 2 -query queryseq.fasta -db juglans_sequence.fasta -outfmt "6" -out juglans_tabular.txt 
 ```
-
-
-```
-
-The first one will be running a single unknown nucleotide sequence against 
+- submit the job
+  ```
+  sbatch submit_align.sh
+  ```
+- check on your job
+  ```
+  squeue -u [username]
+  ```
