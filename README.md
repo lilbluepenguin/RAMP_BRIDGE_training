@@ -71,6 +71,7 @@ Here you will find training materials, self-guided challenges, and links to tuto
 - [Blast: identify an unknown sequence and align between two or more sequences tutorial](https://www.jax.org/-/media/jaxweb/files/education-and-learning/tutorials/blast-written-tutorials_clickable.pdf?rev=d7c9d4d8518c4691853a5f28fd6cd80f)
 
 **Friday August 16**
+- [blast command line](blast_command_line.md)
 
 
 ### Week 4
