@@ -98,3 +98,11 @@ blastp -num_threads 2 -query queryseq.fasta -db juglans_sequence.fasta -outfmt "
   ```
   squeue -u [username]
   ```
+- ***Q. Check your result files, what do you see?***
+    - what is the difference between standard output and tabular format?
+    - what happened for the unknown nucleotide sequence?
+    - what might you do differently?
+ 
+
+
+
