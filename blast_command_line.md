@@ -84,8 +84,8 @@ Now that we have our databases we can actually run the aligner!
 echo `hostname`
 module load blast/2.13.0
 
-blastn -num_threads 2 -query unknown_nuc_seq.fasta -db araport11_cds_repseq.fa -out unknown_seq_blast_standard_output.txt
-blastn -num_threads 2 -query unknown_nuc_seq.fasta -db araport11_cds_repseq.fa -outfmt "6" -out unknown_seq_blast_tabular.txt
+blastn -num_threads 2 -query unknown_nuc_seq.fasta -db araport11_cds_repseq.fasta -out unknown_seq_blast_standard_output.txt
+blastn -num_threads 2 -query unknown_nuc_seq.fasta -db araport11_cds_repseq.fasta -outfmt "6" -out unknown_seq_blast_tabular.txt
 
 blastp -num_threads 2 -query queryseq.fasta -db juglans_sequence.fasta -out juglans_standard_output.txt 
 blastp -num_threads 2 -query queryseq.fasta -db juglans_sequence.fasta -outfmt "6" -out juglans_tabular.txt 
