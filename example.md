@@ -32,8 +32,8 @@ The `-d' '` tells the cut command that you want to delimite by space (default is
 One thing is you know all header lines start with '>' and each sequence has a header. You can use `grep` to print out all the header lines
 
 ```
-grep '>' elegans.cds.fasta
-grep '>' -c elegans.cds.fasta
+grep '>' short_header_elegans.cds.fasta
+grep '>' -c short_header_elegans.cds.fasta
 ```
 ***Q. What's the difference between the output of the two commands? Which one gives you the information you want?***
 
@@ -46,15 +46,20 @@ grep '>' -c *.fasta
 
 ***Q.Count the number of lines in `elegans.cds.fasta`***
 ```
-wc -l 
+wc -l short_header_elegans.cds.fasta
+```
+***Q. what happens if you leave out the -l flag?***
+
+You can make modifications to the headers with `sed`. Say you want to add a prefix to the header of each entry 
+```
+sed 's/>/>header/g' short_header_elegans.cds.fasta > short_header_label_elegans.cds.fasta
 ```
 
 
-
-***Q. what happens if you leave out the -l flag?***
-
-
-
+Now. Your turn 
+- what do you see in the header for test.pep.fasta?
+- count the number of lines in test.pep.fasta
+- count the number of sequences in test.pep.fasta
 
 
 
