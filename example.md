@@ -1,3 +1,9 @@
+### Starting an interactive session
+```
+srun --partition=general --qos=general --mem=2G --pty bash
+```
+
+### Getting the files
 Copy the following files with `cp /path/to/file /path/to/destination`
 ```
 cp /core/labs/Wegrzyn/akriti_temp_ramp/Caenorhabditis_elegans.WBcel235.110.chromosome.I.gff3 .
@@ -60,6 +66,7 @@ Now. Your turn
 - what do you see in the header for test.pep.fasta?
 - count the number of lines in test.pep.fasta
 - count the number of sequences in test.pep.fasta
+
 
 
 
