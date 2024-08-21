@@ -76,7 +76,7 @@ Here you will find training materials, self-guided challenges, and links to tuto
 
 ### Week 4
 
-Wednesday August 
+[Wednesday](example.md)
 
 
 
