@@ -66,6 +66,12 @@ Now. Your turn
 - what do you see in the header for test.pep.fasta?
 - count the number of lines in test.pep.fasta
 - count the number of sequences in test.pep.fasta
+- add "example" to the start of each fasta header
+
+
+GFF files or General Feature Format
+
+
 
 
 
